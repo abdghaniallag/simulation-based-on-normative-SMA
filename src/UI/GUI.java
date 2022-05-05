@@ -8,7 +8,7 @@ import javafx.application.Platform;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 import util.agentData;
-import util.Resources;
+import util.SystemData;
 
 import java.util.ArrayList;
 import java.util.Objects;
@@ -24,12 +24,12 @@ public class GUI extends CyclicBehaviour {
 	public void action() {
 		ACLMessage msg = gui.receive();
 		if (msg != null)
-			if (Resources.DONE&&Resources.HEALING_TIME==0) {
+			if (SystemData.IS_TERMINATE&&SystemData.HEALING_TIME==0) {
 				// terminate system
-				Resources.calculateHealingTimeSystem();
+				SystemData.calculateHealingTimeSystem();
 				System.out.println("................terminate system.........................");
-				System.out.println("....   " + (Resources.HEALING_TIME) + "   ....");
-//				gui.doSuspend();
+				System.out.println("....   " + (SystemData.HEALING_TIME) + "   ....");
+ 			gui.doSuspend();
 			} else {
 
 				boolean exist = false;
@@ -57,7 +57,7 @@ public class GUI extends CyclicBehaviour {
 				if (exist) {
 					// "Exist"
 
-					Resources.terminateSystem(gui.agentInfos);
+					SystemData.terminateSystem(gui.agentInfos);
 
 					gui.agentInfos.get(i).setType(agentdata.getType());
 					gui.agentInfos.get(i).setRunning(agentdata.isRunning());

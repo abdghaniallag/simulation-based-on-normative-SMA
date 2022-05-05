@@ -27,7 +27,7 @@ import javafx.scene.text.Text;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import util.agentData;
-import util.Resources;
+import util.SystemData;
 import util.target;
 
 import java.io.File;
@@ -62,7 +62,7 @@ public class MyContainer extends Application {
 			profile.setParameter(Profile.MAIN_HOST, "localhost");
 			AgentContainer agentContainer = runtime.createAgentContainer(profile);
 			agentContainer.createNewAgent("EnvirennementGui", "UI.EnvirennementGui", new Object[] {}).start();
-			Resources.startTimer();
+			SystemData.startTimer();
 			if (!fileimport) {
 				for (int i = 1; i <= numberOfAgentSains; i++) {
 					agentContainer.createNewAgent("individual" + i, "agentpack.individual", new Object[] { "Sain" })
