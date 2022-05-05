@@ -1,10 +1,10 @@
 package behaviours;
 
-import agentpack.MyContainer;
 import agentpack.individual;
 import jade.core.AID;
 import jade.core.behaviours.OneShotBehaviour;
 import jade.lang.acl.ACLMessage;
+import start.MyContainer;
 import util.Heading;
 
 import java.io.IOException;
@@ -18,10 +18,6 @@ public class Move extends OneShotBehaviour {
 		this.agent = agent;
 	}
 
-	public void punishement() {
-		agent.myData.setCompte(agent.myData.getCompte() - 300);
-		// System.out.println(agent.myData.getCompte());
-	}
 
 	@Override
 	public void action() {
@@ -41,7 +37,6 @@ public class Move extends OneShotBehaviour {
 			if (Heading.distance(agent.myData.getHomeX(), coordinateX, agent.myData.getHomeY(),
 					coordinateY) <= agent.myData.getDistance()) {
 				if (agent.myData.getCompte() > 500) {
-					punishement();
 					agent.addBehaviour(new MoveNear(agent));
 				} else {
 					System.out.println("agent can't do this behaviour");
@@ -57,29 +52,19 @@ public class Move extends OneShotBehaviour {
 				if (Heading.distance(agent.myData.getHomeX(), agent.myData.getTargetX(), agent.myData.getHomeY(),
 						agent.myData.getTargetY()) <= agent.myData.getDistance()) {
 					if (agent.myData.getCompte() > 500) {
-						punishement();
+						
 						agent.addBehaviour(new MoveNear(agent));
 					} else {
 						System.out.println(agent.getLocalName() + " agent can't do this behaviour");
 						agent.addBehaviour(new Move(agent));
-						ACLMessage msg = new ACLMessage(ACLMessage.INFORM);
-						msg.addReceiver(new AID("EnvirennementGui", AID.ISLOCALNAME));
-
-						try {
-							msg.setContentObject(agent.myData);
-						} catch (IOException e) {
-							// TODO Auto-generated catch block
-							e.printStackTrace();
-						}
-						agent.send(msg);
+						 
 					}
 				} else {
 					System.out.println(agent.getLocalName() + " agent can't do MOVEFAR behaviour");
 					agent.addBehaviour(new Move(agent));
 
 				}
-			} else
-				System.out.println("mafikch");
+			}
 
 		}
 

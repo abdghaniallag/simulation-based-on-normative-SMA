@@ -1,10 +1,10 @@
 package behaviours;
 
-import agentpack.MyContainer;
 import agentpack.individual;
 import jade.core.AID;
 import jade.core.behaviours.OneShotBehaviour;
 import jade.lang.acl.ACLMessage;
+import start.MyContainer;
 import util.step;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -51,7 +51,8 @@ public class MoveNear extends OneShotBehaviour {
 					if (MyContainer.occupation[i][j] != null && MyContainer.occupation[i][j] != agent.myData) {
 						break;
 					}
-					if (i == step.getCordinateX() + agent.myData.getRaduis()
+					if (i == step.getCordinateX() 
+							+ agent.myData.getRaduis()
 							&& j == step.getCordinateY() + agent.myData.getRaduis()
 							&& (MyContainer.occupation[i][j] == null || MyContainer.occupation[i][j] == agent.myData)) {
 						vr2 = true;

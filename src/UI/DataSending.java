@@ -2,12 +2,12 @@ package UI;
 
 import java.io.IOException;
 
-import agentpack.MyContainer;
 import agentpack.individual;
 import jade.core.AID;
 import jade.core.Agent;
 import jade.core.behaviours.TickerBehaviour;
 import jade.lang.acl.ACLMessage;
+import start.MyContainer;
 
 public class DataSending extends TickerBehaviour {
 

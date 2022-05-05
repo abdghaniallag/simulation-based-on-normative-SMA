@@ -1,9 +1,9 @@
 package UI;
 
-import agentpack.MyContainer;
 import jade.core.AID;
 import jade.core.behaviours.CyclicBehaviour;
 import jade.lang.acl.ACLMessage;
+import start.MyContainer;
 import util.agentData;
 import util.Heading;
 

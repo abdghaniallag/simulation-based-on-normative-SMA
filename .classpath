@@ -70,10 +70,15 @@
 	<classpathentry kind="lib" path="lib/gson-2.8.6.jar"/>
 	<classpathentry kind="lib" path="lib/immutables-2.0.jar"/>
 	<classpathentry kind="lib" path="lib/int-output-1.1.jar"/>
-	<classpathentry kind="lib" path="lib/jade.jar"/>
+	<classpathentry kind="lib" path="lib/jade.jar">
+		<attributes>
+			<attribute name="org.eclipse.ajdt.inpath" value="org.eclipse.ajdt.inpath"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry kind="lib" path="lib/json-functions-1.4.jar"/>
 	<classpathentry kind="lib" path="lib/json-simple-1.5.jar"/>
 	<classpathentry kind="lib" path="lib/jsonparsepaths-1.1.0.jar"/>
 	<classpathentry kind="lib" path="lib/textmatcher-1.1.jar"/>
+	<classpathentry kind="con" path="org.eclipse.ajdt.core.ASPECTJRT_CONTAINER"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

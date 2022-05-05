@@ -5,6 +5,7 @@ import behaviours.*;
 import jade.core.Agent;
 import jade.core.behaviours.ParallelBehaviour;
 import jade.core.behaviours.SequentialBehaviour;
+import start.MyContainer;
 import util.agentData;
 
 

@@ -1,10 +1,10 @@
 package behaviours;
 
-import agentpack.MyContainer;
 import agentpack.individual;
 import jade.core.AID;
 import jade.core.behaviours.OneShotBehaviour;
 import jade.lang.acl.ACLMessage;
+import start.MyContainer;
 import util.Heading;
 
 import java.io.IOException;
@@ -217,7 +217,7 @@ public class createAgent extends OneShotBehaviour {
 
 			if (agent.myData.getType().equals("malade")) {
 				timer.scheduleAtFixedRate(new TimerTask() {
-					int i = 10;
+					int i = 8;
 
 					public void run() {
 						i--;
@@ -255,7 +255,7 @@ public class createAgent extends OneShotBehaviour {
 			} else {
 				if (agent.myData.getType().equals("Retablis")) {
 					timer.scheduleAtFixedRate(new TimerTask() {
-						int i = 10;
+						int i = 5;
 
 						public void run() {
 							i--;

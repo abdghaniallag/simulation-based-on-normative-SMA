@@ -1,10 +1,10 @@
 package behaviours;
 
-import agentpack.MyContainer;
 import agentpack.individual;
 import jade.core.AID;
 import jade.core.behaviours.OneShotBehaviour;
 import jade.lang.acl.ACLMessage;
+import start.MyContainer;
 import util.step;
 import java.io.IOException;
 import java.util.ArrayList;

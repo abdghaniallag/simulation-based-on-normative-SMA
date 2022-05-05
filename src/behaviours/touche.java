@@ -1,10 +1,10 @@
 package behaviours;
 
-import agentpack.MyContainer;
 import agentpack.individual;
 import jade.core.AID;
 import jade.core.behaviours.CyclicBehaviour;
 import jade.lang.acl.ACLMessage;
+import start.MyContainer;
 
 import java.io.IOException;
 import java.util.Timer;
@@ -90,7 +90,7 @@ public class touche extends CyclicBehaviour {
 
 						public void run() {
 							i--;
-							if (i == 9) {
+							if (i == 8) {
 								agent.myData.setType("malade");
 							}
 							if (i == 5) {

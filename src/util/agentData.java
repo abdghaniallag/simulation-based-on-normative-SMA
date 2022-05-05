@@ -10,7 +10,7 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Objects;
 
-public class agentData extends Shape implements Serializable {
+public class agentData extends Shape  implements Serializable {
 
 	private AID aid;
 	private String type;
@@ -197,6 +197,12 @@ public class agentData extends Shape implements Serializable {
 			Platform.runLater(runnable);
 		}
 
+	}
+
+	@Override
+	public com.sun.javafx.geom.Shape impl_configShape() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }
