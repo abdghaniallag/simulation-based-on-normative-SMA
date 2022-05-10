@@ -23,7 +23,7 @@ public class individual extends Agent {
         SequentialBehaviour sequentialBehaviour=new SequentialBehaviour();
         ParallelBehaviour parallelBehaviour = new ParallelBehaviour();
         sequentialBehaviour.addSubBehaviour(new createAgent(this));
-        parallelBehaviour.addSubBehaviour(new DataSending(this,100));
+        parallelBehaviour.addSubBehaviour(new DataSending(this,1000));
         parallelBehaviour.addSubBehaviour(new Move(this));
         parallelBehaviour.addSubBehaviour(new touche(this));
         sequentialBehaviour.addSubBehaviour(parallelBehaviour);

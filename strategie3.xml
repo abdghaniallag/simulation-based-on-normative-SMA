@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Norm name="Corona"    >
-  <law name="MoveNearProhibitedByEnforcement">
+ <law name="MoveFarProhibationByEnforcement">
+    <properties>
+      <LawId>3</LawId>
+      <DeonticOperator>Prohibition</DeonticOperator>
+      <Consequence>consequenceAmende2</Consequence>
+      <Behaviour>MoveFar</Behaviour>
+      <RegulationMechanism>EnforcementByHimself</RegulationMechanism>
+      <Enforcer>SelfEnforcer</Enforcer>
+      <Validity>LawValidity</Validity>
+      <State>Active</State>
+    </properties>
+  </law>  <law name="MoveNearProhibitedByEnforcement">
     <properties>
       <LawId>1</LawId>
       <DeonticOperator>Prohibition</DeonticOperator>
@@ -11,16 +22,5 @@
       <Validity>LawValidity</Validity>
       <State>Active</State>
     </properties>
-  </law>   <law name="MoveFarRegimented">
-    <properties>
-      <LawId>2</LawId>
-      <DeonticOperator>Prohibition</DeonticOperator>
-      <Consequence>consequenceAmende</Consequence>
-      <Behaviour>MoveFar</Behaviour>
-      <RegulationMechanism>Regimentation</RegulationMechanism>
-      <Enforcer>SelfEnforcer</Enforcer>
-      <Validity>LawValidity</Validity>
-      <State>Active</State>
-    </properties>
-  </law> 
+  </law>  
 </Norm>

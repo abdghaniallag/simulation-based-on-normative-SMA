@@ -19,15 +19,17 @@ import java.io.File;
 import java.io.IOException;
 import java.util.Vector;
 
-public class CreatDocument { 
+public class CreatDocument2 { 
 	public  NorJadeOntologyBase ontology;
-	  public CreatDocument(NorJadeOntologyBase ontology) {
+	String nomDeStrategie;
+	  public CreatDocument2(NorJadeOntologyBase ontology,String nom) {
 			super();
 			this.ontology =ontology;
+			this.nomDeStrategie=nom;
 		}
 	  	public   Vector<String> getActivelaws() {
 		Vector<String> lawIds=new Vector<String>();
-		File inputFile = new File("LawBase.xml");
+		File inputFile = new File(nomDeStrategie);
         DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
         DocumentBuilder dBuilder;
 		try {
@@ -58,7 +60,7 @@ public class CreatDocument {
 	
 	public   Vector<String> getlawEffects(String LawId) {
 		Vector<String> lawEffects=new Vector<String>();
-		File inputFile = new File("LawBase.xml");
+		File inputFile = new File(nomDeStrategie);
 	        DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
 	        DocumentBuilder dBuilder;
 			try {
@@ -105,7 +107,7 @@ public class CreatDocument {
 	
 	public   Vector<String> getlawAttributes(String LawId) {
 		Vector<String> lawAttributes=new Vector<String>();
-		File inputFile = new File("LawBase.xml");
+		File inputFile = new File(nomDeStrategie);
 	        DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
 	        DocumentBuilder dBuilder;
 			try {
@@ -138,7 +140,7 @@ public class CreatDocument {
 	}
 	public    String getlawstate(String LawId) {
 		 String lawstate="";
-		File inputFile = new File("LawBase.xml");
+		File inputFile = new File(nomDeStrategie);
 	        DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
 	        DocumentBuilder dBuilder;
 			try {
@@ -175,7 +177,7 @@ public class CreatDocument {
 	}
 	public   Vector<String> getlawProperties(String LawId) {
 		Vector<String> lawProperties=new Vector<String>();
-		File inputFile = new File("LawBase.xml");
+		File inputFile = new File(nomDeStrategie);
 	        DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
 	        DocumentBuilder dBuilder;
 			try {
@@ -279,7 +281,7 @@ public class CreatDocument {
 		 insertToOntology(ActiveLaws);
 		}
 	public   void changeState(String LawId,int Active) {
-	try { File inputFile = new File("LawBase.xml");
+	try { File inputFile = new File(nomDeStrategie);
     DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
     DocumentBuilder dBuilder;
     
@@ -330,7 +332,7 @@ public class CreatDocument {
 	 */
 	
 	public   void InsertLaw( String LawProperties[] ,String []effects,String []attributes) {
-		try { File inputFile = new File("LawBase.xml");
+		try { File inputFile = new File(nomDeStrategie);
 	       DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
 	       DocumentBuilder dBuilder;
 	       

@@ -8,6 +8,7 @@ import jade.wrapper.AgentContainer;
 import jade.wrapper.AgentController;
 import jade.wrapper.StaleProxyException;
 import xmlDocument.CreatDocument;
+import xmlDocument.CreatDocument2;
 
 public class LaunchIt {
 
@@ -16,15 +17,13 @@ public class LaunchIt {
 		String norm = "Corona";
 		LoadNorJadeOntology.NorJadeOntology.InsertNorm(norm, 1);
 		String[] behaviourList = { "contact", "creatAgent", "Move", "MoveNear", "MoveFar", "touche" };
-		String[] rewardPunishmentList = { "Amende",
-
-		};
-		String[] consequenceList = { "consequenceAmende", };
+		String[] rewardPunishmentList = { "Amende","Amende2"};
+		String[] consequenceList = { "consequenceAmende","consequenceAmende2"};
 
 		insertBehaviourList(behaviourList);
 		insertRewardPunishmentList(rewardPunishmentList);
 		insertConsequenceList(consequenceList, rewardPunishmentList);
-		new CreatDocument(LoadNorJadeOntology.NorJadeOntology).insertActiveLaws();
+		new CreatDocument2(LoadNorJadeOntology.NorJadeOntology,"strategie2.xml").insertActiveLaws();
 	}
 
 	private static void insertBehaviourList(String[] behaviourList) {
@@ -36,8 +35,7 @@ public class LaunchIt {
 
 	private static void insertConsequenceList(String[] consequenceList, String[] rewardPunishmentList) {
 		for (int i = 0; i < consequenceList.length; i++) {
-			LoadNorJadeOntology.NorJadeOntology.InsertConsequence(consequenceList[i],
-					rewardPunishmentList[i] + "RewardPunishment");
+			LoadNorJadeOntology.NorJadeOntology.InsertConsequence(consequenceList[i],rewardPunishmentList[i]);
 		}
 
 	}

@@ -52,15 +52,12 @@ public class Move extends OneShotBehaviour {
 				if (Heading.distance(agent.myData.getHomeX(), agent.myData.getTargetX(), agent.myData.getHomeY(),
 						agent.myData.getTargetY()) <= agent.myData.getDistance()) {
 					if (agent.myData.getCompte() > 500) {
-						
 						agent.addBehaviour(new MoveNear(agent));
 					} else {
-						System.out.println(agent.getLocalName() + " agent can't do this behaviour");
-						agent.addBehaviour(new Move(agent));
-						 
+						agent.addBehaviour(new Move(agent));	 
 					}
 				} else {
-					System.out.println(agent.getLocalName() + " agent can't do MOVEFAR behaviour");
+					agent.addBehaviour(new MoveFar(agent));
 					agent.addBehaviour(new Move(agent));
 
 				}

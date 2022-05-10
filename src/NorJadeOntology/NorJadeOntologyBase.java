@@ -535,7 +535,7 @@ int i=0;
 		try {
 			FileOutputStream out = new FileOutputStream("NorJadeOntology.owl");
 			model.write(out, "RDF/XML");
-			System.out.println("updated......");
+//			System.out.println("updated......");
 		} catch (FileNotFoundException ex) {
 		}
 	}
@@ -712,13 +712,13 @@ int i=0;
 			}
 			public void InsertRewardPunishment(String BehaviourName) {
 				String BehaviourExecutedBy="AnyAgent";
-				BehaviourName+="RewardPunishment";
+//				BehaviourName+="RewardPunishment";
 				boolean All_exist = IsExistIndividual(BehaviourExecutedBy);
 				
 				if(!All_exist){
 					System.err.println("The property : BehaviourExecutedBy does not existe in NorJADE ontology");
 				}else{
-					System.out.println(BehaviourName+" is inserted succesfully ....");
+					System.out.println(BehaviourName+" is inserted succesfully ");
 				String Query = "PREFIX Base:<http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#>"
 						+ "INSERT DATA {" 
 						+ " Base:" + BehaviourName+ " a Base:Behaviour ." 
@@ -749,11 +749,11 @@ public void InsertConsequence(  String ConsequenceName, String Behaviour) {
 	if(!All_exist){
 		System.err.println("The property : "+Behaviour+" does not existe in NorJADE ontology");
 	}else{
-		System.out.println(ConsequenceName+"is inserted succesfully ....");
+		System.out.println(ConsequenceName+" is inserted succesfully ....");
 	String Query = "PREFIX Base:<http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#>"
 			+ "INSERT DATA {" 
 			+ " Base:" + ConsequenceName+ " a Base:Consequence ." 
-			+ " Base:" + ConsequenceName +  " Base:CanBe Base:RewardPunishment."+Behaviour+" ."
+			+ " Base:" + ConsequenceName +  " Base:CanBe Base:"+Behaviour+" ."
 			 + "}";
 	UpdateExecuting(Query);
 	}

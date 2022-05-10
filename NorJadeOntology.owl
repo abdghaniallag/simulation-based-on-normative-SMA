@@ -1,1711 +1,735 @@
-<?xml version="1.0"?>
-<rdf:RDF xmlns="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#"
-     xml:base="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5"
-     xmlns:owl="http://www.w3.org/2002/07/owl#"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:xml="http://www.w3.org/XML/1998/namespace"
-     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
-    <owl:Ontology rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5"/>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Datatypes
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- http://www.w3.org/2001/XMLSchema#ID -->
-
-    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#ID"/>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Object Properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#AccordingTo -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#AccordingTo">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Voting"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Protocol"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#AggregationOf -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#AggregationOf">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Norm"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Norm"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#AppliedBy -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#AppliedBy">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Law"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Enforcer"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#AppliedTo -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#AppliedTo"/>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#BehaviourExecutedBy -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#BehaviourExecutedBy">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Behaviour"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Agent"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#CanBe -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#CanBe">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Consequence"/>
-        <rdfs:range>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Behaviour"/>
-                    <rdf:Description rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Method"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:range>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#ComposedOf -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#ComposedOf">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#RegulativeNorm"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Law"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Control -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Control">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Law"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Behaviour"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#DefinedBy -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#DefinedBy">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#ProceduralNorm"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Goal"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#EnforcerNameIs -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#EnforcerNameIs">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#ThirdPartyEnforcer"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#SpecificAgent"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#ExecutedBy -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#ExecutedBy">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Enforcement"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Enforcer"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#HoldDuring -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#HoldDuring">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Validity"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#TimeDuration"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#ImplementedBy -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#ImplementedBy">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Law"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#RegulationMechanism"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#ImportantFor -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#ImportantFor">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Event"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Agent"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#LimitationSpecifiedBy -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#LimitationSpecifiedBy">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#SpecifiedLimit"/>
-        <rdfs:range>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#EndEvent"/>
-                    <rdf:Description rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Scope"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:range>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#LimitedBy -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#LimitedBy">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#LimitedDuration"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Limit"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#ReachedBy -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#ReachedBy">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#IndividualGoal"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Behaviour"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#RealizedBy -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#RealizedBy">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#SocialPower"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Enforcer"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#RequireParticipationIn -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#RequireParticipationIn">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#CollectiveGoal"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Protocol"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#RewardedPunishedBy -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#RewardedPunishedBy">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Law"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Consequence"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#SpecifiedBy -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#SpecifiedBy">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Law"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#DeonticOperator"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#StartedBy -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#StartedBy">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#LimitedDuration"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#StartEvent"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#TestedBy -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#TestedBy">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Validity"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#ConditionalTest"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#TriggeredBy -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#TriggeredBy">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Event"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Agent"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Use -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Use">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#ConstitutiveNorm"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#ConstituationMechanism"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#ValidDuring -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#ValidDuring">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Law"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Validity"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Data properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#AgentClass -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#AgentClass">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#ClassOfAgent"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#AgentName -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#AgentName">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#SpecificAgent"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#BehaviourName -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#BehaviourName">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Behaviour"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#EventType -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#EventType">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Event"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#GoalName -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#GoalName">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Goal"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#LawId -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#LawId">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Law"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#ID"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#MethodExecuted -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#MethodExecuted">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Event"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#MethodName -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#MethodName">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Method"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Performative -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Performative">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Event"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#ProtocolId -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#ProtocolId">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Protocol"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Receiver -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Receiver">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Event"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Sender -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Sender">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Event"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Time -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Time">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Scope"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#VariableName -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#VariableName">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Event"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Classes
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#AddingLaw -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#AddingLaw">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#ConstitutiveNorm"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Agent -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Agent"/>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#AnyAgent -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#AnyAgent">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Agent"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Behaviour -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Behaviour"/>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#ClassOfAgent -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#ClassOfAgent">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Agent"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#CollectiveGoal -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#CollectiveGoal">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Goal"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#ConditionalTest -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#ConditionalTest">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Method"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Consequence -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Consequence"/>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#ConstituationMechanism -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#ConstituationMechanism"/>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#ConstitutiveNorm -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#ConstitutiveNorm">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Norm"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#DeonticOperator -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#DeonticOperator"/>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#EndEvent -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#EndEvent">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Event"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Enforcement -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Enforcement">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#RegulationMechanism"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Enforcer -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Enforcer"/>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Event -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Event"/>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Goal -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Goal"/>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Indefinitely -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Indefinitely">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Limit"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#IndividualGoal -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#IndividualGoal">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Goal"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Law -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Law"/>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Limit -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Limit"/>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#LimitedDuration -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#LimitedDuration">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#TimeDuration"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Method -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Method"/>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Norm -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Norm"/>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Obligation -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Obligation">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#DeonticOperator"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#ProceduralNorm -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#ProceduralNorm">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Norm"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Prohibition -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Prohibition">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#DeonticOperator"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Protocol -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Protocol"/>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Recommendation -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Recommendation">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#DeonticOperator"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Regimentation -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Regimentation">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#RegulationMechanism"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#RegulationMechanism -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#RegulationMechanism"/>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#RegulativeNorm -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#RegulativeNorm">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Norm"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Scope -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Scope"/>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#SelfEnforcer -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#SelfEnforcer">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Enforcer"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#SocialPower -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#SocialPower">
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+  <owl:Ontology rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5"/>
+  <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#ID"/>
+  <owl:Class rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#ConditionalTest">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Method"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#LimitedDuration">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#TimeDuration"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#IndividualGoal">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Goal"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Validity"/>
+  <owl:Class rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#UpdatingLaw">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#ConstitutiveNorm"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#SpecificAgent">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Agent"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Limit"/>
+  <owl:Class rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#DeonticOperator"/>
+  <owl:Class rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#ClassOfAgent">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Agent"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Event"/>
+  <owl:Class rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Behaviour"/>
+  <owl:Class rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#RegulativeNorm">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Norm"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#SuppressingLaw">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#ConstitutiveNorm"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Law"/>
+  <owl:Class rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#AddingLaw">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#ConstitutiveNorm"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Voting">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#ConstituationMechanism"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#ThirdPartyEnforcer">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Enforcer"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#StartEvent">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Event"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#CollectiveGoal">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Goal"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#SpecifiedLimit">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Limit"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#RegulationMechanism"/>
+  <owl:Class rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#EndEvent">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Event"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Protocol"/>
+  <owl:Class rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Enforcement">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#RegulationMechanism"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#ConstitutiveNorm">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Norm"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#ProceduralNorm">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Norm"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Scope"/>
+  <owl:Class rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Consequence"/>
+  <owl:ObjectProperty rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Use">
+    <rdfs:range rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#ConstituationMechanism"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#ConstitutiveNorm"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#ImportantFor">
+    <rdfs:range rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Agent"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Event"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#ExecutedBy">
+    <rdfs:range rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Enforcer"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Enforcement"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Control">
+    <rdfs:range rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Behaviour"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Law"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#RewardedPunishedBy">
+    <rdfs:range rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Consequence"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Law"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#ValidDuring">
+    <rdfs:range rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Validity"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Law"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#AccordingTo">
+    <rdfs:range rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Protocol"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Voting"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#TestedBy">
+    <rdfs:range rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#ConditionalTest"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Validity"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#ReachedBy">
+    <rdfs:range rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Behaviour"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#IndividualGoal"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#AppliedBy">
+    <rdfs:range rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Enforcer"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Law"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#BehaviourExecutedBy">
+    <rdfs:range rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Agent"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Behaviour"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#HoldDuring">
+    <rdfs:range rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#TimeDuration"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Validity"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#CanBe">
+    <rdfs:range>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Behaviour"/>
+          <owl:Class rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Method"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:range>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Consequence"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#SpecifiedBy">
+    <rdfs:range rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#DeonticOperator"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Law"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#LimitedBy">
+    <rdfs:range rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Limit"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#LimitedDuration"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#StartedBy">
+    <rdfs:range rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#StartEvent"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#LimitedDuration"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#AggregationOf">
+    <rdfs:range rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Norm"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Norm"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#LimitationSpecifiedBy">
+    <rdfs:range>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#EndEvent"/>
+          <owl:Class rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Scope"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:range>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#SpecifiedLimit"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#DefinedBy">
+    <rdfs:range rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Goal"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#ProceduralNorm"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#RealizedBy">
+    <rdfs:range rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Enforcer"/>
+    <rdfs:domain>
+      <SocialPower rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#SocialPower">
+        <RealizedBy>
+          <ThirdPartyEnforcer rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Enforcer1">
+            <EnforcerNameIs>
+              <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#ConferenceChairMan">
+                <AgentName>ConferenceChairMan</AgentName>
+              </owl:NamedIndividual>
+            </EnforcerNameIs>
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+          </ThirdPartyEnforcer>
+        </RealizedBy>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#ConstituationMechanism"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#SpecificAgent -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#SpecificAgent">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Agent"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#SpecifiedLimit -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#SpecifiedLimit">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Limit"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#StartEvent -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#StartEvent">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Event"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#SuppressingLaw -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#SuppressingLaw">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#ConstitutiveNorm"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#ThirdPartyEnforcer -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#ThirdPartyEnforcer">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Enforcer"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#TimeDuration -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#TimeDuration"/>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#UnlimitedDuration -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#UnlimitedDuration">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#TimeDuration"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#UpdatingLaw -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#UpdatingLaw">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#ConstitutiveNorm"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Validity -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Validity"/>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Voting -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Voting">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#ConstituationMechanism"/>
-    </owl:Class>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Individuals
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Amende -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Amende">
-        <BehaviourExecutedBy rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#AnyAgent"/>
-        <BehaviourName>RewardPunishment.Amende</BehaviourName>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#AmendeRewardPunishment -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#AmendeRewardPunishment">
-        <rdf:type rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Behaviour"/>
-        <BehaviourExecutedBy rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#AnyAgent"/>
-        <BehaviourName>RewardPunishment.AmendeRewardPunishment</BehaviourName>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#AnyAgent -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#AnyAgent">
-        <rdf:type rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#AnyAgent"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Author -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Author">
-        <rdf:type rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#ClassOfAgent"/>
-        <AgentClass>Author</AgentClass>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#CommunicatingAuthor -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#CommunicatingAuthor">
-        <rdf:type rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#ClassOfAgent"/>
-        <AgentClass>CommunicatingAuthor</AgentClass>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#ConferenceChair -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#ConferenceChair">
-        <rdf:type rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#ClassOfAgent"/>
-        <AgentClass>ConferenceChair</AgentClass>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#ConferenceChairMan -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#ConferenceChairMan">
-        <rdf:type rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#SpecificAgent"/>
-        <AgentName>ConferenceChairMan</AgentName>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#ConferenceManagment -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#ConferenceManagment">
-        <ComposedOf rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#DecreasingProductivityLaw"/>
-        <ComposedOf rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#DispatchingLaw"/>
-        <ComposedOf rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#IncreasingProductivityLaw"/>
-        <ComposedOf rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#NotificationLaw"/>
-        <ComposedOf rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#RedactionLaw"/>
-        <ComposedOf rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#ReviewingLaw"/>
-        <ComposedOf rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#SubmittingPaperLaw"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#ConferenceManagmentSystem -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#ConferenceManagmentSystem">
-        <rdf:type rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Norm"/>
-        <AggregationOf rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#ConferenceManagment"/>
-        <AggregationOf rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#SelectingPapers"/>
-        <AggregationOf rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#WritingPaper"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Corona -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Corona">
-        <rdf:type rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#RegulativeNorm"/>
-        <ComposedOf rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#L2"/>
-        <ComposedOf rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#MoveFarRegimented"/>
-        <ComposedOf rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#MoveNearProhibitedByEnforcement"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Deadline -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Deadline">
-        <rdf:type rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#StartEvent"/>
-        <ImportantFor rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#CommunicatingAuthor"/>
-        <TriggeredBy rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#ConferenceChairMan"/>
-        <EventType rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</EventType>
-        <VariableName>ressources.Conference.DeadlineReached</VariableName>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#DecreasingCredibility -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#DecreasingCredibility">
-        <rdf:type rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Method"/>
-        <MethodName>DecreasingCredibility</MethodName>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#DecreasingCredibilityConsequence -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#DecreasingCredibilityConsequence">
-        <CanBe rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#DecreasingCredibility"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#DecreasingProductivity -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#DecreasingProductivity">
-        <rdf:type rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Method"/>
-        <MethodName>DecreasingProductivity</MethodName>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#DecreasingProductivityConsequence -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#DecreasingProductivityConsequence">
-        <CanBe rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#DecreasingProductivity"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#DecreasingProductivityLaw -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#DecreasingProductivityLaw"/>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#DecreasingProductivityValidity -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#DecreasingProductivityValidity">
-        <HoldDuring rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#UnlimitedDuration"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Disappointment -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Disappointment">
-        <BehaviourExecutedBy rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#AnyAgent"/>
-        <BehaviourName>behaviours.Disappointment</BehaviourName>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#DisappointmentBehaviour -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#DisappointmentBehaviour">
-        <BehaviourExecutedBy rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#AnyAgent"/>
-        <BehaviourName>behaviours.DisappointmentBehaviour</BehaviourName>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Dispatching -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Dispatching">
-        <rdf:type rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#StartEvent"/>
-        <ImportantFor rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#AnyAgent"/>
-        <TriggeredBy rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#ConferenceChairMan"/>
-        <EventType rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</EventType>
-        <VariableName>ressources.Conference.DispatchingReached</VariableName>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#DispatchingLaw -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#DispatchingLaw"/>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#DispatchingPaper -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#DispatchingPaper">
-        <rdf:type rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#IndividualGoal"/>
-        <ReachedBy rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#DispatchingPapers"/>
-        <GoalName>DispatchingPaper</GoalName>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#DispatchingPapers -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#DispatchingPapers">
-        <BehaviourExecutedBy rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#ConferenceChair"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+      </SocialPower>
+    </rdfs:domain>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#AppliedTo"/>
+  <owl:ObjectProperty rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#RequireParticipationIn">
+    <rdfs:range rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Protocol"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#CollectiveGoal"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#ImplementedBy">
+    <rdfs:range rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#RegulationMechanism"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Law"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#ComposedOf">
+    <rdfs:range rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Law"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#RegulativeNorm"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#TriggeredBy">
+    <rdfs:range rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Agent"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Event"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#EnforcerNameIs">
+    <rdfs:range rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#SpecificAgent"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#ThirdPartyEnforcer"/>
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#AgentName">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#SpecificAgent"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#AgentClass">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#ClassOfAgent"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#VariableName">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Event"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#GoalName">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Goal"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Sender">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Event"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#MethodName">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Method"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#MethodExecuted">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Event"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#LawId">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#ID"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Law"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Receiver">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Event"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#BehaviourName">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Behaviour"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#ProtocolId">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Protocol"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#EventType">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Event"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Performative">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Event"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Time">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Scope"/>
+  </owl:DatatypeProperty>
+  <IndividualGoal rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#DispatchingPaper">
+    <GoalName>DispatchingPaper</GoalName>
+    <ReachedBy>
+      <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#DispatchingPapers">
         <BehaviourName>behaviours.DispatchingPapers</BehaviourName>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#DispatchingPapersBehaviour -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#DispatchingPapersBehaviour">
-        <BehaviourExecutedBy rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#AnyAgent"/>
-        <BehaviourName>behaviours.DispatchingPapersBehaviour</BehaviourName>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#DispatchingValidity -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#DispatchingValidity">
-        <HoldDuring rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#LimitOfDispatching"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#EndOfDispatching -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#EndOfDispatching">
-        <rdf:type rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#SpecifiedLimit"/>
-        <LimitationSpecifiedBy rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#ScopeOfDispatching"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#EndOfNotification -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#EndOfNotification">
-        <rdf:type rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#SpecifiedLimit"/>
-        <LimitationSpecifiedBy rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#ScopeOfNotification"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#EndOfReviewing -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#EndOfReviewing">
-        <rdf:type rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#SpecifiedLimit"/>
-        <LimitationSpecifiedBy rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#ReviewingDeadline"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#EnforcementByHimself -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#EnforcementByHimself">
-        <rdf:type rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Enforcement"/>
-        <ExecutedBy rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#SelfEnforcer"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#EnforcementByThirdParty -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#EnforcementByThirdParty">
-        <rdf:type rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Enforcement"/>
-        <ExecutedBy rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Enforcer1"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Enforcer1 -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Enforcer1">
-        <rdf:type rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#ThirdPartyEnforcer"/>
-        <EnforcerNameIs rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#ConferenceChairMan"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Exciting -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Exciting">
-        <BehaviourExecutedBy rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#AnyAgent"/>
-        <BehaviourName>behaviours.Exciting</BehaviourName>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#HardProduceRewardPunishment -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#HardProduceRewardPunishment">
-        <BehaviourExecutedBy rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#AnyAgent"/>
-        <BehaviourName>RewardPunishment.HardProduceRewardPunishment</BehaviourName>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#HaveRestBehaviour -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#HaveRestBehaviour">
-        <BehaviourExecutedBy rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#AnyAgent"/>
-        <BehaviourName>behaviours.HaveRestBehaviour</BehaviourName>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#IncreasingProductivity -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#IncreasingProductivity">
-        <rdf:type rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Method"/>
+        <BehaviourExecutedBy>
+          <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#ConferenceChair">
+            <AgentClass>ConferenceChair</AgentClass>
+          </owl:NamedIndividual>
+        </BehaviourExecutedBy>
+      </owl:NamedIndividual>
+    </ReachedBy>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </IndividualGoal>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#IncreasingProductivityValidity">
+    <HoldDuring>
+      <UnlimitedDuration rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#UnlimitedDuration">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#TimeDuration"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+      </UnlimitedDuration>
+    </HoldDuring>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#HardProduceRewardPunishment">
+    <BehaviourName>RewardPunishment.HardProduceRewardPunishment</BehaviourName>
+    <BehaviourExecutedBy>
+      <AnyAgent rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#AnyAgent">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Agent"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+      </AnyAgent>
+    </BehaviourExecutedBy>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#RedactionValidity">
+    <HoldDuring rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#UnlimitedDuration"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#IncreasingProductivityConsequence">
+    <CanBe>
+      <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#IncreasingProductivity">
         <MethodName>IncreasingProductivity</MethodName>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#IncreasingProductivityConsequence -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#IncreasingProductivityConsequence">
-        <CanBe rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#IncreasingProductivity"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#IncreasingProductivityLaw -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#IncreasingProductivityLaw"/>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#IncreasingProductivityValidity -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#IncreasingProductivityValidity">
-        <HoldDuring rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#UnlimitedDuration"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Indefinitely -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Indefinitely">
-        <rdf:type rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Indefinitely"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#L2 -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#L2"/>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#LawValidity -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#LawValidity">
-        <rdf:type rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Validity"/>
-        <HoldDuring rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#UnlimitedDuration"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#LimitOfDispatching -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#LimitOfDispatching">
-        <rdf:type rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#LimitedDuration"/>
-        <LimitedBy rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#EndOfDispatching"/>
-        <StartedBy rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Deadline"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#LimitOfEvaluation -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#LimitOfEvaluation">
-        <rdf:type rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#LimitedDuration"/>
-        <LimitedBy rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#EndOfReviewing"/>
-        <StartedBy rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Deadline"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#LimitOfNotification -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#LimitOfNotification">
-        <rdf:type rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#LimitedDuration"/>
-        <LimitedBy rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#EndOfNotification"/>
-        <StartedBy rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Notification"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#LimitOfSubmitting -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#LimitOfSubmitting">
-        <rdf:type rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#LimitedDuration"/>
-        <LimitedBy rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Indefinitely"/>
-        <StartedBy rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Dispatching"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#MaxProduceRewardPunishment -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#MaxProduceRewardPunishment">
-        <BehaviourExecutedBy rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#AnyAgent"/>
-        <BehaviourName>RewardPunishment.MaxProduceRewardPunishment</BehaviourName>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#MinProduceRewardPunishment -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#MinProduceRewardPunishment">
-        <BehaviourExecutedBy rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#AnyAgent"/>
-        <BehaviourName>RewardPunishment.MinProduceRewardPunishment</BehaviourName>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Move -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Move">
-        <BehaviourExecutedBy rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#AnyAgent"/>
-        <BehaviourName>behaviours.Move</BehaviourName>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#MoveFar -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#MoveFar">
-        <rdf:type rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Behaviour"/>
-        <BehaviourExecutedBy rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#AnyAgent"/>
-        <BehaviourName>behaviours.Move2</BehaviourName>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#MoveFarRegimented -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#MoveFarRegimented">
-        <rdf:type rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Law"/>
-        <AppliedBy rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#SelfEnforcer"/>
-        <Control rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#MoveFar"/>
-        <ImplementedBy rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Regimentation"/>
-        <RewardedPunishedBy rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#consequenceAmende"/>
-        <SpecifiedBy rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Prohibition"/>
-        <ValidDuring rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#LawValidity"/>
-        <LawId rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</LawId>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#MoveNear -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#MoveNear">
-        <rdf:type rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Behaviour"/>
-        <BehaviourExecutedBy rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#AnyAgent"/>
-        <BehaviourName>behaviours.MoveNear</BehaviourName>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#MoveNearProhibitedByEnforcement -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#MoveNearProhibitedByEnforcement">
-        <rdf:type rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Law"/>
-        <AppliedBy rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#SelfEnforcer"/>
-        <Control rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#MoveNear"/>
-        <ImplementedBy rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#EnforcementByHimself"/>
-        <RewardedPunishedBy rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#consequenceAmende"/>
-        <SpecifiedBy rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Prohibition"/>
-        <ValidDuring rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#LawValidity"/>
-        <LawId rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</LawId>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#NormalProduceBehaviour -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#NormalProduceBehaviour">
-        <BehaviourExecutedBy rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#AnyAgent"/>
-        <BehaviourName>behaviours.NormalProduceBehaviour</BehaviourName>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Notification -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Notification">
-        <rdf:type rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#StartEvent"/>
-        <ImportantFor rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#CommunicatingAuthor"/>
-        <TriggeredBy rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#ConferenceChairMan"/>
-        <EventType rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</EventType>
-        <VariableName>ressources.Conference.NotificationReached</VariableName>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#NotificationDelay -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#NotificationDelay">
-        <BehaviourExecutedBy rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#ConferenceChair"/>
-        <BehaviourName>RewardPunishment.NotificationDelay</BehaviourName>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#NotificationDelayConsequence -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#NotificationDelayConsequence">
-        <CanBe rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#NotificationDelay"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#NotificationDelayRewardPunishment -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#NotificationDelayRewardPunishment">
-        <BehaviourExecutedBy rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#AnyAgent"/>
-        <BehaviourName>RewardPunishment.NotificationDelayRewardPunishment</BehaviourName>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#NotificationLaw -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#NotificationLaw"/>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#NotificationValidity -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#NotificationValidity">
-        <HoldDuring rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#LimitOfNotification"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Obligation -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Obligation">
-        <rdf:type rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Obligation"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#PaperRedaction -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#PaperRedaction">
-        <BehaviourExecutedBy rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Author"/>
-        <BehaviourName>behaviours.PaperRedaction</BehaviourName>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Prohibition -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Prohibition">
-        <rdf:type rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Prohibition"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#ReceivingPunishmentRewardPunishment -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#ReceivingPunishmentRewardPunishment">
-        <BehaviourExecutedBy rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#AnyAgent"/>
-        <BehaviourName>RewardPunishment.ReceivingPunishmentRewardPunishment</BehaviourName>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Recommendation -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Recommendation">
-        <rdf:type rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Recommendation"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#RedactionLaw -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#RedactionLaw"/>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#RedactionValidity -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#RedactionValidity">
-        <HoldDuring rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#UnlimitedDuration"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Regimentation -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Regimentation">
-        <rdf:type rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Regimentation"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Reviewer -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Reviewer">
-        <rdf:type rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#ClassOfAgent"/>
-        <AgentClass>Reviewer</AgentClass>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#ReviewingDeadline -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#ReviewingDeadline">
-        <rdf:type rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#EndEvent"/>
-        <ImportantFor rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Reviewer"/>
-        <TriggeredBy rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#ConferenceChairMan"/>
-        <EventType rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</EventType>
-        <VariableName>ressources.Conference.ReviewingReached</VariableName>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#ReviewingLaw -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#ReviewingLaw"/>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#ReviewingValidity -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#ReviewingValidity">
-        <HoldDuring rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#LimitOfEvaluation"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#RewardPunishment.AmendeRewardPunishment -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#RewardPunishment.AmendeRewardPunishment"/>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#RewardPunishment.HardProduceRewardPunishment -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#RewardPunishment.HardProduceRewardPunishment"/>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#RewardPunishment.MaxProduceRewardPunishment -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#RewardPunishment.MaxProduceRewardPunishment"/>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#RewardPunishment.MinProduceRewardPunishment -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#RewardPunishment.MinProduceRewardPunishment"/>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#RewardPunishment.NotificationDelay -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#RewardPunishment.NotificationDelay"/>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#RewardPunishment.NotificationDelayRewardPunishment -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#RewardPunishment.NotificationDelayRewardPunishment"/>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#RewardPunishment.ReceivingPunishmentRewardPunishment -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#RewardPunishment.ReceivingPunishmentRewardPunishment"/>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#ScopeOfDispatching -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#ScopeOfDispatching">
-        <rdf:type rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Scope"/>
-        <Time rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Time>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#ScopeOfNotification -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#ScopeOfNotification">
-        <rdf:type rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Scope"/>
-        <Time rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</Time>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#SelectingPapers -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#SelectingPapers">
-        <rdf:type rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#UpdatingLaw"/>
-        <Use rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#SocialPower"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#SelfEnforcer -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#SelfEnforcer">
-        <rdf:type rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#SelfEnforcer"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#SendEvaluationResult -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#SendEvaluationResult">
-        <BehaviourExecutedBy rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Reviewer"/>
-        <BehaviourName>behaviours.SendEvaluationResult</BehaviourName>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#SendNotification -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#SendNotification">
-        <BehaviourExecutedBy rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#ConferenceChair"/>
+      </owl:NamedIndividual>
+    </CanBe>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#consequenceMaxProduce">
+    <CanBe>
+      <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#RewardPunishment.MaxProduceRewardPunishment"/>
+    </CanBe>
+  </owl:NamedIndividual>
+  <IndividualGoal rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#SendNotifications">
+    <GoalName>SendNotifications</GoalName>
+    <ReachedBy>
+      <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#SendNotification">
         <BehaviourName>behaviours.SendNotification</BehaviourName>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#SendNotifications -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#SendNotifications">
-        <rdf:type rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#IndividualGoal"/>
-        <ReachedBy rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#SendNotification"/>
-        <GoalName>SendNotifications</GoalName>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#SendingCFPBehaviour -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#SendingCFPBehaviour">
-        <BehaviourExecutedBy rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#AnyAgent"/>
-        <BehaviourName>behaviours.SendingCFPBehaviour</BehaviourName>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#SocialPower -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#SocialPower">
-        <rdf:type rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#SocialPower"/>
-        <RealizedBy rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Enforcer1"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#StopeWorkingBehaviour -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#StopeWorkingBehaviour">
-        <BehaviourExecutedBy rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#AnyAgent"/>
-        <BehaviourName>behaviours.StopeWorkingBehaviour</BehaviourName>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#SubmittingPaper -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#SubmittingPaper">
-        <BehaviourExecutedBy rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#CommunicatingAuthor"/>
-        <BehaviourName>behaviours.SubmittingPaper</BehaviourName>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#SubmittingPaperBehaviour -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#SubmittingPaperBehaviour">
-        <BehaviourExecutedBy rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#AnyAgent"/>
-        <BehaviourName>behaviours.SubmittingPaperBehaviour</BehaviourName>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#SubmittingPaperLaw -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#SubmittingPaperLaw"/>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#SubmittingValidity -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#SubmittingValidity">
-        <HoldDuring rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#LimitOfSubmitting"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#UnlimitedDuration -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#UnlimitedDuration">
-        <rdf:type rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#UnlimitedDuration"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#UpdatingLaws -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#UpdatingLaws">
-        <rdf:type rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#ConstitutiveNorm"/>
-        <AppliedTo rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#SubmittingPaperLaw"/>
-        <Use rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#SocialPower"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#WarningSending -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#WarningSending">
-        <BehaviourExecutedBy rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Reviewer"/>
+        <BehaviourExecutedBy rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#ConferenceChair"/>
+      </owl:NamedIndividual>
+    </ReachedBy>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </IndividualGoal>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#HaveRestBehaviour">
+    <BehaviourName>behaviours.HaveRestBehaviour</BehaviourName>
+    <BehaviourExecutedBy rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#AnyAgent"/>
+  </owl:NamedIndividual>
+  <Behaviour rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#touche">
+    <BehaviourName>behaviours.touche</BehaviourName>
+    <BehaviourExecutedBy rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#AnyAgent"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </Behaviour>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#NotificationValidity">
+    <HoldDuring>
+      <LimitedDuration rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#LimitOfNotification">
+        <StartedBy>
+          <StartEvent rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Notification">
+            <VariableName>ressources.Conference.NotificationReached</VariableName>
+            <EventType rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+            >0</EventType>
+            <TriggeredBy rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#ConferenceChairMan"/>
+            <ImportantFor>
+              <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#CommunicatingAuthor">
+                <AgentClass>CommunicatingAuthor</AgentClass>
+              </owl:NamedIndividual>
+            </ImportantFor>
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+          </StartEvent>
+        </StartedBy>
+        <LimitedBy>
+          <SpecifiedLimit rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#EndOfNotification">
+            <LimitationSpecifiedBy>
+              <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#ScopeOfNotification">
+                <Time rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                >1</Time>
+              </owl:NamedIndividual>
+            </LimitationSpecifiedBy>
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+          </SpecifiedLimit>
+        </LimitedBy>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+      </LimitedDuration>
+    </HoldDuring>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#SendEvaluationResult">
+    <BehaviourName>behaviours.SendEvaluationResult</BehaviourName>
+    <BehaviourExecutedBy>
+      <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Reviewer">
+        <AgentClass>Reviewer</AgentClass>
+      </owl:NamedIndividual>
+    </BehaviourExecutedBy>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#MinProduceRewardPunishment">
+    <BehaviourName>RewardPunishment.MinProduceRewardPunishment</BehaviourName>
+    <BehaviourExecutedBy rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#AnyAgent"/>
+  </owl:NamedIndividual>
+  <RegulativeNorm rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Corona">
+    <ComposedOf>
+      <Law rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#MoveFarProhibationByEnforcement">
+        <SpecifiedBy>
+          <Prohibition rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Prohibition">
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+            <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#DeonticOperator"/>
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+          </Prohibition>
+        </SpecifiedBy>
+        <ValidDuring>
+          <Validity rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#LawValidity">
+            <HoldDuring rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#UnlimitedDuration"/>
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+          </Validity>
+        </ValidDuring>
+        <LawId rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >3</LawId>
+        <RewardedPunishedBy>
+          <Consequence rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#consequenceAmende2">
+            <CanBe>
+              <Behaviour rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Amende2">
+                <BehaviourName>RewardPunishment.Amende2</BehaviourName>
+                <BehaviourExecutedBy rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#AnyAgent"/>
+                <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+              </Behaviour>
+            </CanBe>
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+          </Consequence>
+        </RewardedPunishedBy>
+        <ImplementedBy>
+          <Enforcement rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#EnforcementByHimself">
+            <ExecutedBy>
+              <SelfEnforcer rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#SelfEnforcer">
+                <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+                <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Enforcer"/>
+                <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+              </SelfEnforcer>
+            </ExecutedBy>
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+          </Enforcement>
+        </ImplementedBy>
+        <Control>
+          <Behaviour rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#MoveFar">
+            <BehaviourName>behaviours.MoveFar</BehaviourName>
+            <BehaviourName>behaviours.Move2</BehaviourName>
+            <BehaviourExecutedBy rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#AnyAgent"/>
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+          </Behaviour>
+        </Control>
+        <AppliedBy rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#SelfEnforcer"/>
+      </Law>
+    </ComposedOf>
+    <ComposedOf rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#MoveNearProhibitedByEnforcement"/>
+    <ComposedOf rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#MoveFarRegimented"/>
+    <ComposedOf>
+      <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#L2"/>
+    </ComposedOf>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </RegulativeNorm>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#DecreasingProductivityValidity">
+    <HoldDuring rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#UnlimitedDuration"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#consequenceMinProduce">
+    <CanBe>
+      <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#RewardPunishment.MinProduceRewardPunishment"/>
+    </CanBe>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Disappointment">
+    <BehaviourName>behaviours.Disappointment</BehaviourName>
+    <BehaviourExecutedBy rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#AnyAgent"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#NotificationDelayConsequence">
+    <CanBe>
+      <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#NotificationDelay">
+        <BehaviourName>RewardPunishment.NotificationDelay</BehaviourName>
+        <BehaviourExecutedBy rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#ConferenceChair"/>
+      </owl:NamedIndividual>
+    </CanBe>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#WarningSendingConsequence">
+    <CanBe>
+      <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#WarningSending">
         <BehaviourName>RewardPunishment.WarningReceived</BehaviourName>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#WarningSendingConsequence -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#WarningSendingConsequence">
-        <CanBe rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#WarningSending"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#WritingMySection -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#WritingMySection">
-        <rdf:type rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#IndividualGoal"/>
-        <ReachedBy rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#PaperRedaction"/>
-        <GoalName>WritingMySection</GoalName>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#WritingPaper -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#WritingPaper">
-        <rdf:type rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#ProceduralNorm"/>
-        <DefinedBy rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#WritingMySection"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#consequenceAmende -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#consequenceAmende">
-        <rdf:type rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Consequence"/>
-        <CanBe rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#AmendeRewardPunishment"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#consequenceHardProduce -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#consequenceHardProduce">
-        <rdf:type rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Consequence"/>
-        <CanBe rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#RewardPunishment.HardProduceRewardPunishment"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#consequenceMaxProduce -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#consequenceMaxProduce">
-        <rdf:type rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Consequence"/>
-        <CanBe rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#RewardPunishment.MaxProduceRewardPunishment"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#consequenceMinProduce -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#consequenceMinProduce">
-        <rdf:type rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Consequence"/>
-        <CanBe rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#RewardPunishment.MinProduceRewardPunishment"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#consequenceNotificationDelay -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#consequenceNotificationDelay">
-        <rdf:type rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Consequence"/>
-        <CanBe rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#RewardPunishment.NotificationDelay"/>
-        <CanBe rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#RewardPunishment.NotificationDelayRewardPunishment"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#consequenceReceivingPunishment -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#consequenceReceivingPunishment">
-        <rdf:type rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Consequence"/>
-        <CanBe rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#RewardPunishment.ReceivingPunishmentRewardPunishment"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#contact -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#contact">
+        <BehaviourExecutedBy rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Reviewer"/>
+      </owl:NamedIndividual>
+    </CanBe>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#consequenceHardProduce">
+    <CanBe>
+      <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#RewardPunishment.HardProduceRewardPunishment"/>
+    </CanBe>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#ReceivingPunishmentRewardPunishment">
+    <BehaviourName>RewardPunishment.ReceivingPunishmentRewardPunishment</BehaviourName>
+    <BehaviourExecutedBy rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#AnyAgent"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#consequenceNotificationDelay">
+    <CanBe>
+      <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#RewardPunishment.NotificationDelayRewardPunishment"/>
+    </CanBe>
+    <CanBe>
+      <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#RewardPunishment.NotificationDelay"/>
+    </CanBe>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#StopeWorkingBehaviour">
+    <BehaviourName>behaviours.StopeWorkingBehaviour</BehaviourName>
+    <BehaviourExecutedBy rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#AnyAgent"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#SendingCFPBehaviour">
+    <BehaviourName>behaviours.SendingCFPBehaviour</BehaviourName>
+    <BehaviourExecutedBy rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#AnyAgent"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#UpdatingLaws">
+    <Use rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#SocialPower"/>
+    <AppliedTo>
+      <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#SubmittingPaperLaw"/>
+    </AppliedTo>
+  </owl:NamedIndividual>
+  <Behaviour rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Move">
+    <BehaviourName>behaviours.Move</BehaviourName>
+    <BehaviourExecutedBy rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#AnyAgent"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </Behaviour>
+  <Behaviour rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#contact">
+    <BehaviourName>behaviours.contact</BehaviourName>
+    <BehaviourExecutedBy rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#AnyAgent"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </Behaviour>
+  <Behaviour rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#MoveNear">
+    <BehaviourName>behaviours.MoveNear</BehaviourName>
+    <BehaviourExecutedBy rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#AnyAgent"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </Behaviour>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#DecreasingProductivityConsequence">
+    <CanBe>
+      <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#DecreasingProductivity">
+        <MethodName>DecreasingProductivity</MethodName>
+      </owl:NamedIndividual>
+    </CanBe>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#NormalProduceBehaviour">
+    <BehaviourName>behaviours.NormalProduceBehaviour</BehaviourName>
+    <BehaviourExecutedBy rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#AnyAgent"/>
+  </owl:NamedIndividual>
+  <Consequence rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#consequenceAmende">
+    <CanBe>
+      <Behaviour rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Amende">
+        <BehaviourName>RewardPunishment.Amende</BehaviourName>
         <BehaviourExecutedBy rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#AnyAgent"/>
-        <BehaviourName>behaviours.contact</BehaviourName>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#creatAgent -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#creatAgent">
-        <BehaviourExecutedBy rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#AnyAgent"/>
-        <BehaviourName>behaviours.creatAgent</BehaviourName>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#touche -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#touche">
-        <BehaviourExecutedBy rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#AnyAgent"/>
-        <BehaviourName>behaviours.touche</BehaviourName>
-    </owl:NamedIndividual>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+      </Behaviour>
+    </CanBe>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </Consequence>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#consequenceReceivingPunishment">
+    <CanBe>
+      <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#RewardPunishment.ReceivingPunishmentRewardPunishment"/>
+    </CanBe>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#ConferenceManagmentSystem">
+    <AggregationOf>
+      <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#WritingPaper">
+        <DefinedBy>
+          <IndividualGoal rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#WritingMySection">
+            <GoalName>WritingMySection</GoalName>
+            <ReachedBy>
+              <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#PaperRedaction">
+                <BehaviourName>behaviours.PaperRedaction</BehaviourName>
+                <BehaviourExecutedBy>
+                  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Author">
+                    <AgentClass>Author</AgentClass>
+                  </owl:NamedIndividual>
+                </BehaviourExecutedBy>
+              </owl:NamedIndividual>
+            </ReachedBy>
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+          </IndividualGoal>
+        </DefinedBy>
+      </owl:NamedIndividual>
+    </AggregationOf>
+    <AggregationOf>
+      <UpdatingLaw rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#SelectingPapers">
+        <Use rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#SocialPower"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+      </UpdatingLaw>
+    </AggregationOf>
+    <AggregationOf>
+      <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#ConferenceManagment">
+        <ComposedOf rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#SubmittingPaperLaw"/>
+        <ComposedOf>
+          <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#ReviewingLaw"/>
+        </ComposedOf>
+        <ComposedOf>
+          <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#RedactionLaw"/>
+        </ComposedOf>
+        <ComposedOf>
+          <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#NotificationLaw"/>
+        </ComposedOf>
+        <ComposedOf>
+          <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#IncreasingProductivityLaw"/>
+        </ComposedOf>
+        <ComposedOf>
+          <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#DispatchingLaw"/>
+        </ComposedOf>
+        <ComposedOf>
+          <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#DecreasingProductivityLaw"/>
+        </ComposedOf>
+      </owl:NamedIndividual>
+    </AggregationOf>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#SubmittingPaper">
+    <BehaviourName>behaviours.SubmittingPaper</BehaviourName>
+    <BehaviourExecutedBy rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#CommunicatingAuthor"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#DispatchingPapersBehaviour">
+    <BehaviourName>behaviours.DispatchingPapersBehaviour</BehaviourName>
+    <BehaviourExecutedBy rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#AnyAgent"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#MaxProduceRewardPunishment">
+    <BehaviourName>RewardPunishment.MaxProduceRewardPunishment</BehaviourName>
+    <BehaviourExecutedBy rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#AnyAgent"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#SubmittingPaperBehaviour">
+    <BehaviourName>behaviours.SubmittingPaperBehaviour</BehaviourName>
+    <BehaviourExecutedBy rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#AnyAgent"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#DecreasingCredibilityConsequence">
+    <CanBe>
+      <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#DecreasingCredibility">
+        <MethodName>DecreasingCredibility</MethodName>
+      </owl:NamedIndividual>
+    </CanBe>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#ReviewingValidity">
+    <HoldDuring>
+      <LimitedDuration rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#LimitOfEvaluation">
+        <StartedBy>
+          <StartEvent rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Deadline">
+            <VariableName>ressources.Conference.DeadlineReached</VariableName>
+            <EventType rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+            >0</EventType>
+            <TriggeredBy rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#ConferenceChairMan"/>
+            <ImportantFor rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#CommunicatingAuthor"/>
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+          </StartEvent>
+        </StartedBy>
+        <LimitedBy>
+          <SpecifiedLimit rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#EndOfReviewing">
+            <LimitationSpecifiedBy>
+              <EndEvent rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#ReviewingDeadline">
+                <VariableName>ressources.Conference.ReviewingReached</VariableName>
+                <EventType rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                >0</EventType>
+                <TriggeredBy rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#ConferenceChairMan"/>
+                <ImportantFor rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Reviewer"/>
+                <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+              </EndEvent>
+            </LimitationSpecifiedBy>
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+          </SpecifiedLimit>
+        </LimitedBy>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+      </LimitedDuration>
+    </HoldDuring>
+  </owl:NamedIndividual>
+  <Enforcement rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#EnforcementByThirdParty">
+    <ExecutedBy rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Enforcer1"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </Enforcement>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Exciting">
+    <BehaviourName>behaviours.Exciting</BehaviourName>
+    <BehaviourExecutedBy rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#AnyAgent"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#DispatchingValidity">
+    <HoldDuring>
+      <LimitedDuration rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#LimitOfDispatching">
+        <StartedBy rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Deadline"/>
+        <LimitedBy>
+          <SpecifiedLimit rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#EndOfDispatching">
+            <LimitationSpecifiedBy>
+              <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#ScopeOfDispatching">
+                <Time rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                >2</Time>
+              </owl:NamedIndividual>
+            </LimitationSpecifiedBy>
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+          </SpecifiedLimit>
+        </LimitedBy>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+      </LimitedDuration>
+    </HoldDuring>
+  </owl:NamedIndividual>
+  <Behaviour rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#creatAgent">
+    <BehaviourName>behaviours.creatAgent</BehaviourName>
+    <BehaviourExecutedBy rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#AnyAgent"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </Behaviour>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#SubmittingValidity">
+    <HoldDuring>
+      <LimitedDuration rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#LimitOfSubmitting">
+        <StartedBy>
+          <StartEvent rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Dispatching">
+            <VariableName>ressources.Conference.DispatchingReached</VariableName>
+            <EventType rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+            >0</EventType>
+            <TriggeredBy rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#ConferenceChairMan"/>
+            <ImportantFor rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#AnyAgent"/>
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+          </StartEvent>
+        </StartedBy>
+        <LimitedBy>
+          <Indefinitely rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Indefinitely">
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+            <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Limit"/>
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+          </Indefinitely>
+        </LimitedBy>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+      </LimitedDuration>
+    </HoldDuring>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#DisappointmentBehaviour">
+    <BehaviourName>behaviours.DisappointmentBehaviour</BehaviourName>
+    <BehaviourExecutedBy rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#AnyAgent"/>
+  </owl:NamedIndividual>
+  <Recommendation rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Recommendation">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#DeonticOperator"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </Recommendation>
+  <Obligation rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Obligation">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#DeonticOperator"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </Obligation>
+  <Regimentation rdf:about="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#Regimentation">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/acer/ontologies/2018/4/untitled-ontology-5#RegulationMechanism"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </Regimentation>
 </rdf:RDF>
-
-
-
-<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
-
