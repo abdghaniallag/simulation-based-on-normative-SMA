@@ -24,7 +24,7 @@ public class touche extends CyclicBehaviour {
 			ACLMessage msg = agent.receive();
 			if (msg != null) {
 				if (msg.getContent().equals("expose")) {
-					agent.addBehaviour(new contact(agent));
+					
 					agent.myData.setType(msg.getContent());
 					timer.scheduleAtFixedRate(new TimerTask() {
 						int i = 15;
@@ -82,7 +82,7 @@ public class touche extends CyclicBehaviour {
 					break;
 				}
 				case "exposeE": {
-					agent.addBehaviour(new contact(agent));
+					
 					// System.out.println("exposeE "+agent.getLocalName());
 					agent.myData.setType("expose");
 					timer.scheduleAtFixedRate(new TimerTask() {
@@ -106,7 +106,7 @@ public class touche extends CyclicBehaviour {
 				}
 				case "contact": {
 					// System.out.println("contact "+agent.getLocalName());
-					agent.addBehaviour(new contact(agent));
+					
 					break;
 				}
 				}
